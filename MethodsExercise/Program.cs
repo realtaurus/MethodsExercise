@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MethodsExercise
 {
@@ -20,20 +21,24 @@ namespace MethodsExercise
 
             Console.WriteLine($"My friend {StoryName} turned {StoryColor}.");
             Console.WriteLine($"He saw the leadsinger from {StoryBand} had the same {StoryAnimal} as him!!!!!!!!");
+
+            Program myProgram = new Program();
+
+            var result1 = myProgram.Sum(5, 7);
+            Console.WriteLine(Multiply(2,4));
+
         }
         public int Sum(int a, int b)
         {
-            a = 4;
-            b = 2;
+            
             int answer = a + b;
             Console.WriteLine($"The sum of {a} and {b} is {answer}.");
             return answer;
         }
 
-        public int Multiply(int a, int b)
+        public static int Multiply(int a, int b)
         {
-            a = 10;
-            b = 2;
+            
             int answer = a * b;
             Console.WriteLine($"The quotient of {a} and {b}is {answer}.");
             return answer;
